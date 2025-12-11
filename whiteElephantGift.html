@@ -27,3 +27,82 @@
 			<li><a href="refPage.html">Reference Page</a></li>
 			<li><a href="whiteElephantGift.html">White Elephant Gift</a></li>
 		</ul>
+		<br>
+		<div class="carousel-container">
+        	<div class="carousel-wrapper">
+            	<div class="carousel-track" id="carouselTrack">
+                	<div class="carousel-slide">
+                    	<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Mountain landscape">
+                	</div>
+                	<div class="carousel-slide">
+                    	<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=500&fit=crop" alt="Forest path">
+                	</div>
+               		<div class="carousel-slide">
+               	    	<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=500&fit=crop" alt="Sunset beach">
+                	</div>
+                	<div class="carousel-slide">
+                    	<img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=500&fit=crop" alt="Misty mountains">
+                	</div>
+                	<div class="carousel-slide">
+                	    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop" alt="River valley">
+                	</div>
+            	</div>
+            
+            	<button class="carousel-button prev" id="prevBtn">‹</button>
+            	<button class="carousel-button next" id="nextBtn">›</button>
+        	</div>
+
+        <div class="carousel-indicators" id="indicators"></div>
+    </div>
+
+	<script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('indicators');
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('button');
+            indicator.classList.add('indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-advance every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+
