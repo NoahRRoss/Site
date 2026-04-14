@@ -1,19 +1,365 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <title>A Strategic Investment in PWM Leadership | Noah Ross</title>
-    <link rel="stylesheet" href="LetsTalkStyle.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Strategic Investment in ONWM Leadership | Noah Ross</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    body {
+      font-family: 'Georgia', serif;
+      background: #f4f1ec;
+      color: #1a1a1a;
+      line-height: 1.75;
+    }
+
+    /* HEADER */
+    header {
+      background: #0a2340;
+      color: #ffffff;
+      padding: 60px 80px 50px;
+      border-bottom: 4px solid #c9a84c;
+    }
+
+    header .eyebrow {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: normal;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      max-width: 720px;
+    }
+
+    header .subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: #a8bdd0;
+      margin-top: 20px;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 56px 80px;
+      border-bottom: 1px solid #ddd8ce;
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    section.alt { background: #ffffff; }
+
+    section h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 20px;
+    }
+
+    section h3 {
+      font-size: 26px;
+      font-weight: normal;
+      color: #0a2340;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 18px;
+      max-width: 740px;
+    }
+
+    /* PILLAR BADGE */
+    .pillar-badge {
+      display: inline-block;
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #0a2340;
+      color: #c9a84c;
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+
+    /* COMPARISON TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+    }
+
+    thead tr {
+      background: #0a2340;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    tbody tr:nth-child(even) { background: #f9f6f1; }
+    tbody tr:nth-child(odd) { background: #ffffff; }
+
+    tbody td {
+      padding: 13px 20px;
+      color: #333;
+      border-bottom: 1px solid #e8e2d8;
+    }
+
+    tbody td:first-child { color: #666; }
+    tbody td:last-child { color: #0a2340; font-weight: 500; }
+
+    /* CALLOUT BOXES */
+    .callout {
+      background: #0a2340;
+      color: #e8eef4;
+      border-left: 4px solid #c9a84c;
+      padding: 24px 28px;
+      margin: 28px 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 15px;
+      max-width: 740px;
+    }
+
+    .callout strong { color: #c9a84c; }
+
+    /* METRICS BOX */
+    .metrics {
+      background: #f0ede6;
+      border-left: 4px solid #c9a84c;
+      padding: 20px 24px;
+      margin: 20px 0;
+      max-width: 740px;
+    }
+
+    .metrics p {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .metrics strong {
+      color: #0a2340;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    /* PRESSURE CARDS */
+    .pressure-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .pressure-card {
+      background: #ffffff;
+      border-top: 3px solid #c9a84c;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .pressure-card h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0a2340;
+      margin-bottom: 10px;
+    }
+
+    .pressure-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* ACCOMPLISHMENT BLOCKS */
+    .accomplishment {
+      border-left: 3px solid #c9a84c;
+      padding: 0 0 0 20px;
+      margin-bottom: 28px;
+      max-width: 740px;
+    }
+
+    .accomplishment h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0a2340;
+      margin-bottom: 8px;
+    }
+
+    .accomplishment p {
+      font-size: 15px;
+      color: #444;
+      margin: 0;
+    }
+
+    /* PHASE TIMELINE */
+    .phases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .phase {
+      background: #ffffff;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    .phase-number {
+      font-family: 'Arial', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #e8e2d8;
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      line-height: 1;
+    }
+
+    .phase h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #c9a84c;
+      margin-bottom: 8px;
+    }
+
+    .phase p {
+      font-size: 14px;
+      color: #444;
+      margin: 0;
+    }
+
+    /* GOVERNANCE LIST */
+    .gov-list {
+      list-style: none;
+      max-width: 740px;
+    }
+
+    .gov-list li {
+      padding: 14px 0 14px 0;
+      border-bottom: 1px solid #e8e2d8;
+      font-size: 15px;
+      color: #333;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .gov-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 6px;
+      height: 6px;
+      background: #c9a84c;
+      border-radius: 50%;
+    }
+
+    .gov-list li strong { color: #0a2340; }
+
+    /* THE ASK */
+    .ask-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .ask-item {
+      background: #0a2340;
+      color: #e8eef4;
+      padding: 28px 22px;
+    }
+
+    .ask-number {
+      font-family: 'Arial', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #c9a84c;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .ask-item p {
+      font-size: 14px;
+      color: #c8d8e8;
+      margin: 0;
+    }
+
+    /* NEXT STEPS TABLE */
+    .next-steps-table td:first-child {
+      color: #0a2340;
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a2340;
+      color: #a8bdd0;
+      padding: 32px 80px;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span { color: #c9a84c; }
+
+    @media (max-width: 700px) {
+      header, section, footer { padding-left: 24px; padding-right: 24px; }
+      .pressure-grid, .phases, .ask-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
 <body>
 
 <!-- HEADER -->
 <header>
   <div class="eyebrow">Old National Bank &nbsp;·&nbsp; Private Wealth Management</div>
-  <h1>A Strategic Investment in PWM Leadership</h1>
+  <h1>A Strategic Investment in ONWM Leadership</h1>
   <p style="color:#c9a84c; font-family:Arial,sans-serif; font-size:15px; margin-top:10px; font-style:italic;">
-    Proposed: Director of IT Strategy &amp; Process Innovation
+    Proposed: IT Strategy &amp; Process Innovation
   </p>
   <div class="subtitle">Presented by Noah Ross &nbsp;|&nbsp; [Date]</div>
 </header>
@@ -23,7 +369,7 @@
   <h2>The Business Case</h2>
   <h3>Why This Role Needs to Exist — and Why Now</h3>
   <p>The wealth management industry is undergoing its most significant technology transformation in decades. According to Deloitte's 2024 wealth management outlook, over 70% of high-net-worth clients now expect a fully integrated digital experience — yet fewer than 30% of regional banks report having the internal infrastructure to consistently deliver it.</p>
-  <p>Old National Bank's PWM division is well-positioned to lead. But capturing that position requires more than reacting to technology changes as they arrive — it requires dedicated strategic leadership embedded within the business, accountable for driving the initiatives that will define our competitive standing over the next 3–5 years.</p>
+  <p>Old National Bank's ONWM division is well-positioned to lead. But capturing that position requires more than reacting to technology changes as they arrive — it requires dedicated strategic leadership embedded within the business, accountable for driving the initiatives that will define our competitive standing over the next 3–5 years.</p>
   <div class="callout">
     <strong>This role does not currently exist at Old National Bank.</strong> This proposal makes the case for why it should — and outlines the mandate, structure, and accountability model that will make it successful.
   </div>
@@ -47,14 +393,14 @@
       <p>Data governance, reporting accuracy, and audit-readiness requirements continue to expand. A reactive posture to compliance technology is a growing liability.</p>
     </div>
   </div>
-  <p>Each of these is addressable — but not without dedicated leadership to own the work.</p>
+  <p>Each of these is addressable — but not without dedicated leadership to own the work. Industry data consistently shows that reactive technology implementations run 2–3x the cost of planned ones, making this role not just a strategic investment, but a financially sound one.</p>
 </section>
 
 <!-- THE GAP -->
 <section class="alt">
   <h2>The Gap This Role Fills</h2>
   <h3>What Exists Today vs. What This Role Adds</h3>
-  <p>Today, IT and process leadership within PWM operates reactively. What is missing is a dedicated, senior-level function focused entirely on forward-looking strategy. This is not a reallocation of existing responsibilities — it is a net new capability.</p>
+  <p>Today, IT and process leadership within ONWM operates reactively. What is missing is a dedicated, senior-level function focused entirely on forward-looking strategy. This is not a reallocation of existing responsibilities — it is a net new capability.</p>
   <table>
     <thead>
       <tr>
@@ -67,6 +413,7 @@
       <tr><td>Ad hoc process fixes</td><td>Enterprise-grade process design and governance</td></tr>
       <tr><td>Tactical vendor engagement</td><td>Strategic procurement and platform evaluation</td></tr>
       <tr><td>Operational continuity</td><td>Scalable infrastructure for growth</td></tr>
+      <tr><td>Conversion support as needed</td><td>End-to-end conversion ownership — planning through post-launch stabilization</td></tr>
       <tr><td>IT as a service provider</td><td>IT as a strategic business partner</td></tr>
     </tbody>
   </table>
@@ -82,7 +429,7 @@
     <div class="pillar-badge">Pillar 1 &nbsp;·&nbsp; Year 1 Priority</div>
     <h3 style="margin-top:0;">Digital Client Experience</h3>
     <p>Clients expect a seamless, modern digital experience. The current toolset is fragmented and reactive — creating friction for advisors and inconsistency for clients at critical relationship moments.</p>
-    <p><strong>Owns:</strong> PWM-specific digital roadmap with committed milestones; peer benchmarking of client portal and communication capabilities; business requirements and change management for all client-facing technology upgrades.</p>
+    <p><strong>Owns:</strong> ONWM-specific digital roadmap with committed milestones; peer benchmarking of client portal and communication capabilities; business requirements and change management for all client-facing technology upgrades.</p>
     <div class="metrics">
       <strong>Measurable Outcomes</strong>
       <p>Reduction in advisor time on manual workarounds (target: [X]% within 12 months) · Improvement in client digital engagement scores · Reduction in client-reported technology complaints</p>
@@ -93,7 +440,7 @@
     <div class="pillar-badge">Pillar 2 &nbsp;·&nbsp; Year 1–2</div>
     <h3 style="margin-top:0;">Data, Reporting &amp; Advisor Enablement</h3>
     <p>Leadership and advisors are making decisions on manually assembled, often delayed data. The raw information exists — the gap is infrastructure and ownership to surface it reliably.</p>
-    <p><strong>Owns:</strong> PWM data and reporting strategy with clear deliverable timelines; rationalization of existing reporting tools; automation of high-frequency recurring reports.</p>
+    <p><strong>Owns:</strong> ONWM data and reporting strategy with clear deliverable timelines; rationalization of existing reporting tools; automation of high-frequency recurring reports.</p>
     <div class="metrics">
       <strong>Measurable Outcomes</strong>
       <p>Reduction in time-to-report for key dashboards (target: [X] days to real-time) · Elimination of [X] manual reporting processes · Quantified advisor hours recovered through automation</p>
@@ -116,12 +463,8 @@
 <section class="alt">
   <h2>Building for the Future</h2>
   <h3>A Dedicated Innovation Function</h3>
-  <p>Alongside the Director-level strategic role, this proposal includes the creation of a supporting position dedicated to keeping Old National Bank ahead of the technology curve — researching and piloting emerging tools before they become industry-standard requirements.</p>
-  <p>This role will focus on AI tools, automation platforms, client experience innovations, and adjacent technologies. It will translate capability into practical PWM use cases through low-risk proof-of-concept pilots, and serve as an internal thought partner when the team evaluates new vendors or approaches.</p>
-
-  <div class="callout">
-    <strong>Budget &amp; ROI:</strong> Fully-loaded cost estimated at $[X] annually. Expected return: reduced vendor spend through better-informed procurement, technology adoption in months rather than years, and avoided cost of reactive implementations — which industry data shows run 2–3x the cost of planned ones. Formal ROI review at 12 months.
-  </div>
+  <p>Alongside this strategic role, this proposal includes the creation of a supporting position dedicated to keeping Old National Bank ahead of the technology curve — researching and piloting emerging tools before they become industry-standard requirements.</p>
+  <p>This role will focus on AI tools, automation platforms, client experience innovations, and adjacent technologies. It will translate capability into practical ONWM use cases through low-risk proof-of-concept pilots, and serve as an internal thought partner when the team evaluates new vendors or approaches.</p>
 
   <p><strong>Operating Structure:</strong> A weekly cross-functional standup will connect this role to every line of business and IT — a brief, action-oriented forum to surface emerging needs, share what is being piloted, and align on priorities before they become urgent.</p>
 
@@ -141,41 +484,63 @@
     </div>
     <div class="accomplishment">
       <h4>Team Leadership</h4>
-      <p>Built and scaled a [X]-person team through [period of change], establishing role clarity, performance standards, and escalation protocols. Maintained operational quality metrics during simultaneous change management and daily execution demands.</p>
+      <p>Managed a team of 14 people through multiple management changes and bank conversions — maintaining accountability and operational quality throughout each transition. Established efficient procedures and escalation protocols that kept the team aligned and performing consistently regardless of the organizational changes happening around them.</p>
     </div>
     <div class="accomplishment">
       <h4>System Integrations</h4>
-      <p>Managed end-to-end integration of [X] platforms across the PWM business, eliminating [X] manual handoff points and reducing processing time for [key workflow] by approximately [X]%. All integrations delivered in compliance with audit and data governance requirements.</p>
+      <p>Managed end-to-end integration of [X] platforms across the ONWM business, eliminating [X] manual handoff points and reducing processing time for [key workflow] by approximately [X]%. All integrations delivered in compliance with audit and data governance requirements.</p>
     </div>
     <div class="accomplishment">
-      <h4>Case Management System Conversions</h4>
-      <p>Oversaw full migration of the PWM case management system — [X] active cases transitioned, [X] staff trained, cutover completed [on time / under budget]. Post-launch defect rate below [X]%, with average case resolution time reduced by [X] days.</p>
+      <h4>Case Management System Conversion</h4>
+      <p>Currently leading an active migration of the ONWM case management system — an initiative that remains on track to be delivered on time and within budget. Coordination spans vendors, IT, compliance, and end users, with training, cutover planning, and risk mitigation all progressing on schedule. This ongoing effort is a live demonstration of the cross-functional project ownership this role is built to execute.</p>
     </div>
   </div>
 
   <p style="margin-top:12px;">The pattern across all of these is consistent: complex, cross-functional, high-stakes initiatives delivered through technical fluency, stakeholder management, and disciplined execution. That is the job description for the role being proposed here.</p>
 </section>
 
-<!-- TRANSITION PLAN -->
+<!-- DUAL TRACK -->
 <section class="alt">
-  <h2>Operational Continuity</h2>
-  <h3>Transition Plan</h3>
-  <p>The most important risk to address is continuity. This role does not succeed if existing operational coverage degrades during the stand-up period.</p>
-  <div class="phases">
+  <h2>Operating Model</h2>
+  <h3>Two Tracks. One Leader. No Trade-Off.</h3>
+  <p>This proposal does not ask leadership to choose between operational stability and strategic growth. It funds both — simultaneously and intentionally.</p>
+  <p>This role will continue to own the daily operational responsibilities held today. That is not a constraint on the strategic role; it is evidence that a capable operation is already running. The ask is additive: stand up a second track focused entirely on the initiatives that will define ONWM's competitive position over the next 3–5 years.</p>
+
+  <table style="margin: 28px 0;">
+    <thead>
+      <tr>
+        <th>Track 1 — Run the Business</th>
+        <th>Track 2 — Build the Future</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Daily IT and process ownership</td><td>Strategic pillar execution</td></tr>
+      <tr><td>Operational escalations and continuity</td><td>Technology roadmap and vendor strategy</td></tr>
+      <tr><td>Line of business IT liaison</td><td>Cross-functional initiative leadership</td></tr>
+      <tr><td>Conversion execution and coordination</td><td>End-to-end conversion ownership and strategy</td></tr>
+      <tr><td>Ongoing team and system support</td><td>Innovation role oversight and direction</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    These tracks are not in competition. They are complementary — and having the same senior leader anchoring both ensures decisions made on <strong>Track 2</strong> are always grounded in the operational reality of <strong>Track 1</strong>.
+  </div>
+
+  <div class="phases" style="margin-top: 32px;">
     <div class="phase">
       <div class="phase-number">01</div>
-      <h4>Months 1–3 &nbsp;·&nbsp; Transition</h4>
-      <p>Daily operational responsibilities documented, assigned, and handed off. Escalation path remains available. No new strategic initiatives begin until handoffs are confirmed stable.</p>
+      <h4>Months 1–3 &nbsp;·&nbsp; Formalizing the Mandate</h4>
+      <p>Daily responsibilities continue unchanged. Leadership aligns on Year 1 priorities, cross-functional access is established, and the role's title and scope are formally recognized.</p>
     </div>
     <div class="phase">
       <div class="phase-number">02</div>
-      <h4>Months 3–6 &nbsp;·&nbsp; Parallel Running</h4>
-      <p>Pillar 1 work begins while operations team runs independently. Bi-weekly check-in to catch and resolve any coverage gaps quickly.</p>
+      <h4>Months 3–6 &nbsp;·&nbsp; Building the Infrastructure</h4>
+      <p>The innovation role is hired and onboarded. The cross-functional standup launches. Governance rhythms become operational. Track 2 reaches full capacity without affecting Track 1.</p>
     </div>
     <div class="phase">
       <div class="phase-number">03</div>
-      <h4>Month 6+ &nbsp;·&nbsp; Full Activation</h4>
-      <p>Director role operates at full strategic capacity. Operational escalations handled through established team structure — engaged only for cross-functional or strategic implications.</p>
+      <h4>Month 6+ &nbsp;·&nbsp; Full Dual-Track Operation</h4>
+      <p>Both tracks run with clear ownership, defined rhythms, and measurable output. This is the steady state — not a destination where daily responsibilities disappear, but where both tracks are properly resourced and producing value.</p>
     </div>
   </div>
 </section>
@@ -201,7 +566,7 @@
   <div class="ask-grid">
     <div class="ask-item">
       <div class="ask-number">01</div>
-      <p>Approve the creation of the <strong style="color:#ffffff;">Director of IT Strategy &amp; Process Innovation</strong> role within PWM, with the mandate and reporting structure outlined in this proposal.</p>
+      <p>Approve the creation of the <strong style="color:#ffffff;">IT Strategy &amp; Process Innovation</strong> role within ONWM, with the mandate and reporting structure outlined in this proposal.</p>
     </div>
     <div class="ask-item">
       <div class="ask-number">02</div>
@@ -229,11 +594,11 @@
     </thead>
     <tbody>
       <tr><td>Executive review and feedback on this proposal</td><td>Leadership Team</td><td>[Date]</td></tr>
-      <tr><td>Approval decision on Director role creation</td><td>COO / Senior Leadership</td><td>[Date]</td></tr>
-      <tr><td>Approval decision on Innovation role and budget</td><td>COO / Director of Operations</td><td>[Date]</td></tr>
+      <tr><td>Approval decision on IT Strategy &amp; Process Innovation role</td><td>COO / Senior Leadership</td><td>[Date]</td></tr>
+      <tr><td>Approval decision on Innovation role and budget</td><td>COO / Manager of Operations</td><td>[Date]</td></tr>
       <tr><td>Align on Year 1 strategic priorities</td><td>Noah Ross + Senior Leadership</td><td>[Date]</td></tr>
       <tr><td>Communicate new structure to relevant stakeholders</td><td>HR / COO</td><td>[Date]</td></tr>
-      <tr><td>Director role activated — Pillar 1 work begins</td><td>Noah Ross</td><td>[Date]</td></tr>
+      <tr><td>IT Strategy &amp; Process Innovation role activated — Pillar 1 work begins</td><td>Noah Ross</td><td>[Date]</td></tr>
     </tbody>
   </table>
 </section>
